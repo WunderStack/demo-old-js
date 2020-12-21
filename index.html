@@ -8,7 +8,7 @@
     <script>
     document.addEventListener("DOMContentLoaded", () => {
         const baseUrl = '{{API_BASE_URL}}';
-        const apiURL = baseUrl + 'api/pokemon/';
+        const apiURL = baseUrl + '?path=api/pokemon/';
 
         fetch(apiURL)
             .then(response => response.json())
