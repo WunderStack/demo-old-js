@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />   
+    <title>WunderPreview Example</title>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const baseUrl = '{{API_BASE_URL}}';
+        const apiURL = baseUrl + 'api/pokemon/';
+
+        fetch(apiURL)
+            .then(response => response.json())
+            .then((data) => {
+                console.log(data);
+                const results = data['results'];
+
+                var el = document.querySelector('#pokemonList');
+                for(i=0; i<results.length; i++) {
+                    var pokemon = results[i];
+                    el.innerHTML = el.innerHTML + '<li>' + pokemon['number'] + ': ' + pokemon['name'] + '(' + pokemon['type1'] + '/' + pokemon['type2'] + ')</li>\n';
+                }
+            });
+    });        
+    </script>
+</head>
+
+<body class="antialiased">
+    <h1>WunderPreview <3 Old Javascript</h1>
+    <hr/>
+    <h1>List of Pokémon:</h1>
+    <ul id="pokemonList">
+    </ul>
+</body>
+
+</html>
