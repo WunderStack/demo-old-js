@@ -11,6 +11,9 @@
         width: 50px;
         margin: 0 0 -10px 0;
     }
+    a {
+        font-weight: bold;
+    }
 
 </style>
 
@@ -32,7 +35,7 @@
                 var el = document.querySelector('#pokemonList');
                 for(i=0; i<results.length; i++) {
                     var pokemon = results[i];
-                    el.innerHTML = el.innerHTML + '<li>' + pokemon['number'] + ': ' + pokemon['name'] + '(' + pokemon['type1'] + '/' + pokemon['type2'] + ')</li>\n';
+                    el.innerHTML = el.innerHTML + '<li>' + pokemon['number'] + ': ' + pokemon['name'] + ' (' + pokemon['type1'] + '/' + pokemon['type2'] + ')</li>\n';
                 }
             });
     });        
@@ -42,10 +45,17 @@
 <body class="antialiased">
     <h1>WunderPreview <img src="heart.gif" class="heart" /> Vanilla Javascript</h1>
     <p>
-        This <a href="https://github.com/WunderStack/demo-vanilla-js" target="_blank">Project in vanilla Javascript</a> reads a list of Pokémon from a REST API defined in <a href="https://github.com/WunderStack/demo-django" target="_blank">the demo Django Project</a>.
+        This show cases the <b>communication between several previews</b> in WunderPreview.
     </p>
     <p>
-        This project knows where to find the backend API through the <code>API_BASE_URL</code> environment variable that was set in the settings of this repository in <a href="https://wunderpreview.com" target="_blank">WunderPreview</a>.</p>
+        This preview of a <a href="https://github.com/WunderStack/demo-vanilla-js" target="_blank">Project in vanilla Javascript</a> reads a list of Pokémon from a REST API defined in a preview of <a href="https://github.com/WunderStack/demo-django" target="_blank">the demo Django Project</a>.
+    </p>
+    <p>
+        This preview knows where to find the backend API through the <code>API_BASE_URL</code> environment variable that was set in the settings of this repository in <a href="https://wunderpreview.com" target="_blank">WunderPreview</a>.
+    </p>
+    <p>
+        For more information see the documentation: <a href="https://wunderpreview.com/docs/how-to-use-env-vars-during-build-time-and-run-time" target="_blank">How to use env vars during build-time and run-time</b>.
+    </p>
     <hr/>
 
     <img src="picachu1.gif"/> <img src="picachu2.gif"/> <img src="picachu3.gif"/>
