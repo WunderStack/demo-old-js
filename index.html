@@ -8,7 +8,7 @@
     <script>
     document.addEventListener("DOMContentLoaded", () => {
         const baseUrl = '{{API_BASE_URL}}';
-        const apiURL = baseUrl + '?path=api/pokemon/';
+        const apiURL = baseUrl + 'api/pokemon/';
 
         fetch(apiURL)
             .then(response => response.json())
@@ -27,7 +27,7 @@
 </head>
 
 <body class="antialiased">
-    <h1>WunderPreview <3 Old Javascript</h1>
+    <h1>WunderPreview <3 Vanilla Javascript</h1>
     <hr/>
     <h1>List of Pokémon:</h1>
     <ul id="pokemonList">
