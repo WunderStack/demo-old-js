@@ -1,5 +1,17 @@
 <!doctype html>
 <html lang="en">
+<style>
+    * {
+        color: #444;
+    }
+    h1 {
+        text-align: center;
+    }
+    .heart {
+        color: mediumvioletred;
+    }
+
+</style>
 
 <head>
     <meta charset="utf-8" />
@@ -27,11 +39,18 @@
 </head>
 
 <body class="antialiased">
-    <h1>WunderPreview <3 Vanilla Javascript</h1>
+    <h1>WunderPreview <span clasS="heart"><3</span> Vanilla Javascript</h1>
+    <p>
+        This <a href="https://github.com/WunderStack/demo-vanilla-js" target="_blank">Project in vanilla Javascript</a> reads a list of Pokémon from a REST API defined in <a href="https://github.com/WunderStack/demo-django" target="_blank">the demo Django Project</a>.
+    </p>
+    <p>
+        This project knows where to find the backend API through the <code>API_BASE_URL</code> environment variable that was set in the settings of this repository in <a href="https://wunderpreview.com" target="_blank">WunderPreview</a>.</p>
     <hr/>
-    <h1>List of Pokémon:</h1>
+    <img src="picachu1.gif"/> <img src="picachu2.gif"/> <img src="picachu3.gif"/>
+    <h2>List of Pokémon:</h2>
     <ul id="pokemonList">
     </ul>
+    <img src="underconstruction.gif"/> <img src="underconstruction-big.gif"/> <img src="underconstruction.gif"/>
 </body>
 
 </html>
